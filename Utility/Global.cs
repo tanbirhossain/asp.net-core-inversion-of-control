@@ -4,6 +4,6 @@ namespace Utility
 {
     public class Global
     {
-        public static IServiceProvider Services { get; set; }
+        public static IServiceProvider ServiceProvider { get; set; }
     }
 }

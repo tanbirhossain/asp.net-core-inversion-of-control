@@ -11,7 +11,7 @@ namespace NUnitTest
         [SetUp]
         public void Setup()
         {
-            var serviceProvider = Global.Services;
+            var serviceProvider = Global.ServiceProvider;
             if (serviceProvider != null)
             {
                 _valueService = serviceProvider.GetService<IValueService>();

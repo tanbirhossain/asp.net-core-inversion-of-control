@@ -13,7 +13,7 @@ namespace NUnitTest
         {
             IServiceCollection services = new ServiceCollection();
             IOCContainer.Build(services);
-            Global.Services = services.BuildServiceProvider();
+            Global.ServiceProvider = services.BuildServiceProvider();
         }
 
         [OneTimeTearDown]
