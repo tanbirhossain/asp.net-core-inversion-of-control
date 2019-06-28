@@ -10,6 +10,7 @@ namespace NUnitTest
     {
         private IValueService _valueService;
         private ValuesController _valueController;
+
         [SetUp]
         public void Setup()
         {

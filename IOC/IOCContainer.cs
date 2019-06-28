@@ -2,9 +2,9 @@
 
 namespace IOC
 {
-    public class IOCContainer
+    public static class IOCContainer
     {
-        public static void Build(IServiceCollection services)
+        public static void BuildContainer(this IServiceCollection services)
         {
             ServiceIOC.Configure(services);
             RepositoryIOC.Configure(services);

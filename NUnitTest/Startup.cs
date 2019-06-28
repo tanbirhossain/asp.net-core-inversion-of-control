@@ -18,8 +18,8 @@ namespace NUnitTest
         public IServiceProvider ContainerBuilder()
         {
             IServiceCollection services = new ServiceCollection();
-            IOCContainer.Build(services);
-
+            //IOCContainer.Build(services);
+            services.BuildContainer();
             return services.BuildServiceProvider();
         }
 
