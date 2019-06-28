@@ -8,6 +8,7 @@ namespace IOC
         public static void Configure(IServiceCollection services)
         {
             services.AddSingleton<IValueService, ValueService>();
+
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using IOC;
 using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
+using System;
 using Utility;
 
 namespace NUnitTest
@@ -11,9 +12,15 @@ namespace NUnitTest
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
+            Global.ServiceProvider = ContainerBuilder();
+        }
+
+        public IServiceProvider ContainerBuilder()
+        {
             IServiceCollection services = new ServiceCollection();
             IOCContainer.Build(services);
-            Global.ServiceProvider = services.BuildServiceProvider();
+
+            return services.BuildServiceProvider();
         }
 
         [OneTimeTearDown]
